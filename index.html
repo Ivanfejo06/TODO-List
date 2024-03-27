@@ -11,12 +11,16 @@
 </head>
 <body>
     <script src="js.js"></script>
-    <div>
-        <h1>To do list</h1>
-        <input type="text" id="entrada" placeholder="Tarea a hacer...">
-        <button type="button" class="boton" onclick="AgregarTarea()" id="entrada">Agregar Tarea</button>
-    </div>
-    <ul id="lista">
-    </ul>
+    <section class="seccion">
+        <div>
+            <h1>To do list</h1>
+            <input type="text" id="entrada" placeholder="Tarea a hacer...">
+            <button type="button" class="boton" onclick="AgregarTarea()" id="entrada">Agregar Tarea</button>
+            <button onclick="BorrarTodas()">Borrar Todas</button>
+            <button onclick="TareaMasRapidaInfo()">Tarea mas rapida</button>
+        </div>
+        <p id="tareaMasRapidaInfo"></p>
+        <ul id="lista"></ul>
+    </section>
 </body>
 </html>
