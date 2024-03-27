@@ -81,6 +81,9 @@ function ListarTareas() {
         descripcion.textContent = tarea.descripcion + " (Creada: " + new Date(tarea.fecha_creacion).toLocaleString() + ", Completada: " + (tarea.fecha_completado ? new Date(tarea.fecha_completado).toLocaleString() : "Pendiente") + ")"; // Indica la fecha de creacion de la tarea y si esta fue completada o no
         if (tarea.completado) {
             descripcion.style.textDecoration = "line-through"; // Tacha la tarea si está completada
+            var tickSpan = document.createElement("span");
+            tickSpan.textContent = "\u2713"; // Unicode para el símbolo de tick
+            li.appendChild(tickSpan); // Agrega el símbolo de tick al elemento li
         }
 
         // Evento onclick que llama a la funcion de toggle para poder guardar el dato por si la tarea fue completada
